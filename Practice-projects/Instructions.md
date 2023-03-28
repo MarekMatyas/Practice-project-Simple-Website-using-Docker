@@ -67,7 +67,7 @@ To see if the image was created I ran `docker images` or we can see in our Docke
 
 ---
 
-3. For it to be public I pushed it to Docker Hub using `docker push "username" "repoName":tag` which will create a Repository straight away if it does not exist already. 
+3. For it to be public I pushed it to Docker Hub using `docker push "username"/"repoName":tag` which will create a Repository straight away if it does not exist already. 
 
 ---
 
@@ -79,9 +79,13 @@ To see if the image was created I ran `docker images` or we can see in our Docke
 
 ## For external use
 
-- `docker pull marekmatyas/own-web-project-repo`
-- `docker run -d -p 80:80 marekmatyas/own-web-project-repo` 
-- Check browser `localhost`
+- `docker pull marekmatyas/my-own-web-project`
+- run the container
+- check browser->localhost
+
+**Possible blocker when pushing to Registry**- You might have to create a tag before pushing:
+- `docker tag "imageID" "username"/"nameofImage":tag(latest)`
+- Then push
 
 
 # Thank you 
